@@ -19,6 +19,7 @@ class Location{
     public $name = "";
     public $lat = "";
     public $lon = "";
+    public $distance = "";
 }
 
 $HOST = 'localhost';
@@ -58,6 +59,7 @@ while($row = $tagStmt->fetch(PDO::FETCH_ASSOC)){
   $location->license = $row['liscense'];
   $location->lat = $row['lat'];
   $location->lon = $row['lon'];
+  $location->distance = $row['distance'];
   $locations[] = $location;
 }
 
